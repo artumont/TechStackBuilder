@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import { ThemeProvider } from 'next-themes';
+import ThemeToggle from '@/app/theme';
 import "./globals.css";
 
 const nunito = Nunito({
@@ -26,10 +27,11 @@ export default function RootLayout({
                 <ThemeProvider 
                     attribute="class"
                     defaultTheme="system"
-                    enableSystem
-                    disableTransitionOnChange
+                    enableSystem={true}
+                    storageKey="theme"
                 >
                     {children}
+                    <ThemeToggle />
                 </ThemeProvider>
             </body>
         </html>

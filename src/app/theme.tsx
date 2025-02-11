@@ -5,18 +5,23 @@ import { useTheme } from 'next-themes'
 
 export default function ThemeToggle() {
     const [mounted, setMounted] = useState(false)
-    const { theme, setTheme } = useTheme()
+    const { theme, systemTheme, setTheme } = useTheme()
 
     useEffect(() => setMounted(true), [])
 
     if (!mounted) return null
 
+    const currentTheme = theme === 'system' ? systemTheme : theme
+
     return (
         <button
-            className="fixed top-4 right-4 p-2 rounded-lg bg-slate-200 dark:bg-slate-700"
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            className="fixed bottom-4 right-4 p-2 rounded-lg bg-light-secondary dark:bg-dark-secondary"
+            onClick={() => {
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
+                setTheme(newTheme)
+            }}
         >
-            {theme === 'dark' ? '🌞' : '🌙'}
+            {currentTheme === 'dark' ? '🌞' : '🌙'}
         </button>
     )
 }
