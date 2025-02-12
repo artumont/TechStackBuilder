@@ -7,7 +7,7 @@ const chalk = require('chalk');
 class BadgeExtractor {
     constructor() {
         this.badges = {};
-        this.outputPath = path.join(__dirname, 'badges.json');
+        this.outputPath = path.join(__dirname, 'tech-stack.json');
     }
 
     async start() {
@@ -61,9 +61,9 @@ class BadgeExtractor {
     }
 
     async handleLocalExtraction() {
-        const readmePath = path.join(__dirname, '../../README.md');
+        const readmePath = path.join(__dirname, './README.md');
         if (!fs.existsSync(readmePath)) {
-            throw new Error('README.md not found in project root');
+            throw new Error('README.md not found');
         }
         const content = fs.readFileSync(readmePath, 'utf8');
         this.badges = this.parseBadges(content);
@@ -147,7 +147,6 @@ class BadgeExtractor {
     }
 }
 
-// Start the application
 const extractor = new BadgeExtractor();
 extractor.start().catch(error => {
     console.error(chalk.red('Fatal error:'), error);
