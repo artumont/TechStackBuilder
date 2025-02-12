@@ -16,7 +16,6 @@ An elegant web application that helps developers create and showcase their techn
 - [React](https://reactjs.org/) - UI library
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
 - [Tailwind CSS](https://tailwindcss.com/) - Styling
-- [Supabase](https://supabase.com/) - Backend and database
 - [Lucide Icons](https://lucide.dev/) - Beautiful icons
 
 ## Getting Started 🚀
