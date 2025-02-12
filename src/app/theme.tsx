@@ -16,7 +16,7 @@ export default function ThemeToggle() {
 
     return (
         <button
-            className="fixed bottom-4 right-4 p-2 rounded-full bg-dark-secondary border-2 border-[#2c2c2e] shadow-lg"
+            className="fixed bottom-4 right-4 p-2 rounded-full bg-dark-secondary border-2 border-[#2c2c2e] shadow-lg text-white"
             onClick={() => {
                 const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
                 setTheme(newTheme)

@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 import { Search } from 'lucide-react';
 
@@ -30,7 +32,7 @@ export default function Home() {
                             focus:outline-none
                             transition-colors"
                         />
-                        <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-dark-secondary dark:text-light-secondary" />
+                        <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-dark-secondary dark:text-light-secondary cursor-pointer"/>
                     </div>     
                     {/* Content will go here */}
                 </div>
