@@ -147,6 +147,7 @@ class BadgeExtractor {
     }
 }
 
+// Start the application
 const extractor = new BadgeExtractor();
 extractor.start().catch(error => {
     console.error(chalk.red('Fatal error:'), error);
