@@ -16,9 +16,11 @@ export default {
         },
         light: {
           DEFAULT: '#e2e2e2',
-          secondary: '#c1c1c1'
+          secondary: '#dbdbdb'
         }
       },
+      keyframes: {},
+      animation: {},
     },
   },
   plugins: [],

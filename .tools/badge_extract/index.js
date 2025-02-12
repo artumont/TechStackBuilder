@@ -131,7 +131,11 @@ class BadgeExtractor {
         
         let match;
         while ((match = badgeRegex.exec(content)) !== null) {
-            const name = decodeURIComponent(match[1]);
+            const name = decodeURIComponent(match[1]).replace(/_/g, ' ');
+            const normalizedName = name.toLowerCase();
+            if (Object.keys(badges).some(key => key.toLowerCase() === normalizedName)) {
+                continue;
+            }
             badges[name] = match[0];
         }
 

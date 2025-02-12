@@ -1,5 +1,9 @@
 export {
     Sun, 
     Moon, 
-    Search
+    Search,
+    Link,
+    Sparkles,
+    Code,
+    Brackets
 } from 'lucide-react'
