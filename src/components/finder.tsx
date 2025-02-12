@@ -55,7 +55,13 @@ export default function Finder() {
                     const techName = tech.name.trim().toLowerCase()
                     return techName.includes(searchTerm.toLowerCase())
                 })
-                .sort((a, b) => a.name.length - b.name.length)
+                .sort((a, b) => {
+                    const aStartsWith = a.name.toLowerCase().startsWith(searchTerm.toLowerCase())
+                    const bStartsWith = b.name.toLowerCase().startsWith(searchTerm.toLowerCase())
+                    if (aStartsWith && !bStartsWith) return -1
+                    if (!aStartsWith && bStartsWith) return 1
+                    return a.name.length - b.name.length
+                })
                 .slice(0, RENDER_LIMIT) 
             setFilteredTechnologies(filtered)
         }, 50),
