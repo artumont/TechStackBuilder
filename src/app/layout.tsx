@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import { ThemeProvider } from 'next-themes';
 import ThemeToggle from '@/components/theme';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 
 const nunito = Nunito({
@@ -66,6 +67,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
+            <SpeedInsights/>
             <body
                 className={`${nunito.variable} antialiased`}
             >
