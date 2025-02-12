@@ -3,6 +3,8 @@
 import { Search, Link, Sparkles, Code, Brackets } from './icons'
 import { useState, useEffect, useCallback } from 'react'
 
+const RENDER_LIMIT = 30;
+
 interface Technology {
     id: string;
     name: string;
@@ -33,8 +35,8 @@ export default function Finder() {
                     name,
                     url: url as string
                 }))
-                setTechnologies(techArray)
-                setFilteredTechnologies(techArray.slice(0, 20))
+                setTechnologies(techArray.sort((a, b) => a.name.length - b.name.length))
+                setFilteredTechnologies(techArray.slice(0, RENDER_LIMIT))
             } catch (error) {
                 console.error('Error loading technologies:', error)
             }
@@ -51,9 +53,10 @@ export default function Finder() {
                         return true
                     }
                     const techName = tech.name.trim().toLowerCase()
-                    return techName.includes(searchTerm.toLowerCase())
+                    return techName.startsWith(searchTerm.toLowerCase())
                 })
-                .slice(0, 20)
+                .sort((a, b) => a.name.length - b.name.length)
+                .slice(0, RENDER_LIMIT) 
             setFilteredTechnologies(filtered)
         }, 50),
         [technologies]
