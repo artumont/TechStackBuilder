@@ -12,6 +12,20 @@ const nunito = Nunito({
 export const metadata: Metadata = {
     title: "Tech Stack Builder",
     description: "Build and share your tech stack",
+    icons: {
+        icon: [
+            {
+                media: '(prefers-color-scheme: light)',
+                url: '/favicon-light.ico',
+                href: '/favicon-light.ico',
+            },
+            {
+                media: '(prefers-color-scheme: dark)',
+                url: '/favicon-dark.ico',
+                href: '/favicon-dark.ico',
+            },
+        ],
+    },
 };
 
 export default function RootLayout({
