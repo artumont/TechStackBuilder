@@ -55,7 +55,7 @@ export default function Finder() {
                 })
                 .slice(0, 20)
             setFilteredTechnologies(filtered)
-        }, 300), // 300ms delay
+        }, 50),
         [technologies]
     )
 
@@ -101,7 +101,7 @@ export default function Finder() {
                     value={searchQuery}
                     onChange={handleSearch}
                     placeholder="Search technologies..."
-                    className="w-full px-4 py-2 pr-10 rounded-lg border border-dark-secondary dark:border-light-secondary
+                    className="w-full px-4 py-2 pr-10 rounded-lg border border-dark-secondary dark:border-[#ffffff44]
                     bg-transparent
                     text-dark dark:text-light
                     placeholder:text-dark-secondary dark:placeholder:text-light-secondary
@@ -114,7 +114,7 @@ export default function Finder() {
                 {filteredTechnologies.map(tech => (
                     <div 
                         key={tech.id}
-                        className="flex flex-col items-start p-4 border border-dark-secondary dark:border-light-secondary rounded-lg w-full"
+                        className="flex flex-col items-start p-4 border border-dark-secondary dark:border-[#ffffff44] rounded-lg w-full"
                     >
                         <img src={tech.url} alt={tech.name} className="w-auto h-6" />
                         <div className='flex justify-between items-center w-full mt-2'>
@@ -122,19 +122,22 @@ export default function Finder() {
                             <div className='flex items-center mt-2'>
                                 <button 
                                     onClick={() => handleCopy(tech.url, 'link')}
-                                    className="m-1 px-1 py-1 rounded-lg border border-dark-secondary dark:border-light-secondary text-black dark:text-white"
+                                    className="m-1 px-1 py-1 rounded-lg border border-dark-secondary dark:border-[#ffffff44] text-black dark:text-white"
+                                    title='Copy link'
                                 >
                                     <Link className='w-5.2 h-5.2 flex-shrink-0'/>
                                 </button>
                                 <button 
                                     onClick={() => handleCopy(tech.url, 'embed')}
-                                    className="m-1 px-1 py-1 rounded-lg border border-dark-secondary dark:border-light-secondary text-black dark:text-white"
+                                    className="m-1 px-1 py-1 rounded-lg border border-dark-secondary dark:border-[#ffffff44] text-black dark:text-white"
+                                    title='Copy embed'
                                 >
                                     <Code className='w-5.2 h-5.2 flex-shrink-0'/>
                                 </button>
                                 <button 
                                     onClick={() => handleCopy(tech.url, 'markdown')}
-                                    className="m-1 px-1 py-1 rounded-lg border border-dark-secondary dark:border-light-secondary text-black dark:text-white"
+                                    className="m-1 px-1 py-1 rounded-lg border border-dark-secondary dark:border-[#ffffff44] text-black dark:text-white"
+                                    title='Copy markdown'
                                 >
                                     <Brackets className='w-5.2 h-5.2 flex-shrink-0'/>
                                 </button>
