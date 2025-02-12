@@ -117,7 +117,7 @@ class BadgeExtractor {
                 type: 'input',
                 name: 'newPath',
                 message: 'Enter new output path (relative to badge_extract folder):',
-                default: 'badges.json'
+                default: 'tech-stack.json'
             }
         ]);
 
