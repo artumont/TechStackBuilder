@@ -1,6 +1,6 @@
 'use client'
 
-import { Search } from '../components';
+import { Search } from '../components/icons';
 
 export default function Home() {
     return (

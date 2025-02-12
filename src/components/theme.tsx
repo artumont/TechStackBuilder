@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
-import { Sun, Moon } from '.'
+import { Sun, Moon } from './icons'
 
 export default function ThemeToggle() {
     const [mounted, setMounted] = useState(false)
