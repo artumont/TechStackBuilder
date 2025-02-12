@@ -11,7 +11,32 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
     title: "Tech Stack Builder",
-    description: "Build and share your tech stack",
+    description: "Build and share your technology stack badges for GitHub profiles and portfolios. Easy to use, customizable badge generator.",
+    keywords: "tech stack, GitHub badges, shields.io, developer tools, portfolio builder",
+    authors: [{ name: "Artu" }],
+    creator: "Artu",
+    publisher: "Artu",
+    robots: "index, follow",
+    openGraph: {
+        type: "website",
+        locale: "en_US",
+        url: "https://techstackbuilder.vercel.app",
+        title: "Tech Stack Builder",
+        description: "Build and share your technology stack badges for GitHub profiles",
+        siteName: "Tech Stack Builder",
+        images: [{
+            url: "/assets/og-image.png",
+            width: 1200,
+            height: 630,
+            alt: "Tech Stack Builder Preview"
+        }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Tech Stack Builder",
+        description: "Build and share your technology stack badges for GitHub profiles",
+        images: ["/assets/og-image.png"],
+    },
     icons: {
         icon: [
             {
@@ -26,6 +51,12 @@ export const metadata: Metadata = {
             },
         ],
     },
+    themeColor: [
+        { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+        { media: "(prefers-color-scheme: dark)", color: "#000000" }
+    ],
+    viewport: "width=device-width, initial-scale=1.0",
+    category: "technology",
 };
 
 export default function RootLayout({
