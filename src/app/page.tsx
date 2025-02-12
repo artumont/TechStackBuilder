@@ -1,7 +1,6 @@
 'use client'
 
-import Image from "next/image";
-import { Search } from 'lucide-react';
+import { Search } from '../components';
 
 export default function Home() {
     return (
