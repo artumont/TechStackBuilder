@@ -126,7 +126,7 @@ class BadgeExtractor {
     }
 
     parseBadges(content) {
-        const badgeRegex = /https:\/\/img\.shields\.io\/badge\/([^-]+)-[^?\s]+/g;
+        const badgeRegex = /https:\/\/img\.shields\.io\/badge\/([^-]+)-[^?\s]+(?:[?][^\s]+)?/g;
         const badges = {};
         
         let match;
@@ -138,7 +138,7 @@ class BadgeExtractor {
             }
             badges[name] = match[0];
         }
-
+    
         return badges;
     }
 
