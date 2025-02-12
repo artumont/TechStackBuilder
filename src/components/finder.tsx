@@ -53,7 +53,7 @@ export default function Finder() {
                         return true
                     }
                     const techName = tech.name.trim().toLowerCase()
-                    return techName.startsWith(searchTerm.toLowerCase())
+                    return techName.includes(searchTerm.toLowerCase())
                 })
                 .sort((a, b) => a.name.length - b.name.length)
                 .slice(0, RENDER_LIMIT) 
