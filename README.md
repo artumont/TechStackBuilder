@@ -23,7 +23,7 @@ An elegant web application that helps developers create and showcase their techn
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/techstackbuilder.git
+git clone https://github.com/artumont/TechStackBuilder.git
 cd techstackbuilder
 ```
 

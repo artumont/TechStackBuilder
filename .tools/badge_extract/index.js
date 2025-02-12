@@ -126,17 +126,17 @@ class BadgeExtractor {
     }
 
     parseBadges(content) {
-        const badgeRegex = /https:\/\/img\.shields\.io\/badge\/([^-]+)-[^?\s]+(?:[?][^\s]+)?/g;
+        const badgeRegex = /`(https:\/\/img\.shields\.io\/badge\/([^-]+)-[^?\s]+(?:[?][^\s]+)?)`/g;
         const badges = {};
         
         let match;
         while ((match = badgeRegex.exec(content)) !== null) {
-            const name = decodeURIComponent(match[1]).replace(/_/g, ' ');
+            const name = decodeURIComponent(match[2]).replace(/_/g, ' ');
             const normalizedName = name.toLowerCase();
             if (Object.keys(badges).some(key => key.toLowerCase() === normalizedName)) {
                 continue;
             }
-            badges[name] = match[0];
+            badges[name] = match[1];
         }
     
         return badges;
