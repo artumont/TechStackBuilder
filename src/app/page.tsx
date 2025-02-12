@@ -11,7 +11,7 @@ export default function Home() {
             bg-slate-50 dark:bg-dark
             font-[family-name:var(--font-nunito)]"
         >
-            <div className="container mx-auto px-4 py-4 md:py-10">
+            <div className="container mx-auto px-4 py-4 md:py-16 md:pb-8">
                 <div className="flex flex-col items-center justify-center space-y-2.5">
                     <h1 className="text-4xl md:text-6xl font-light text-black dark:text-slate-100 text-center">
                         Tech Stack Builder
