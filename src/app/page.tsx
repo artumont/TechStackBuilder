@@ -5,7 +5,7 @@ export default function Home() {
     return (
         <main className="min-h-screen 
             bg-[linear-gradient(to_right,rgba(0,0,0,0.3)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.3)_1px,transparent_1px)] 
-            dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] 
+            dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.10)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.10)_1px,transparent_1px)] 
             bg-[size:4rem_4rem] 
             bg-slate-50 dark:bg-dark
             font-[family-name:var(--font-nunito)]"
