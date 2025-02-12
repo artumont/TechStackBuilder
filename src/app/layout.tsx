@@ -67,10 +67,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <SpeedInsights/>
             <body
                 className={`${nunito.variable} antialiased`}
             >
+                <SpeedInsights/>
                 <ThemeProvider 
                     attribute="class"
                     defaultTheme="system"
