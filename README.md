@@ -1,8 +1,8 @@
-# TechStackBuilder 🛠️
+# 🛠️ TechStackBuilder
 
 An elegant web application that helps developers create and showcase their technology stack badges for GitHub profiles and portfolios.
 
-## Features ✨
+## ✨ Features
 
 - 🎨 Modern, responsive UI with dark/light theme support
 - 🔍 Quick search functionality for technologies
@@ -10,7 +10,7 @@ An elegant web application that helps developers create and showcase their techn
 - 🎭 Seamless theme switching with system preference support
 - 📱 Mobile-friendly design
 
-## Tech Stack 💻
+## 💻 Tech Stack
 
 - [Next.js](https://nextjs.org/) - React framework for production
 - [React](https://reactjs.org/) - UI library
@@ -18,7 +18,7 @@ An elegant web application that helps developers create and showcase their techn
 - [Tailwind CSS](https://tailwindcss.com/) - Styling
 - [Lucide Icons](https://lucide.dev/) - Beautiful icons
 
-## Getting Started 🚀
+## 🚀 Getting Started
 
 1. **Clone the repository**
 ```bash
@@ -39,7 +39,7 @@ pnpm dev
 4. **Open your browser**
 Navigate to [http://localhost:3000](http://localhost:3000)
 
-## Contributing 🤝
+## 🤝 Contributing 
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -49,10 +49,10 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Are we missing a technology? 🤔
+## 🤔 Are we missing a technology?
 
 If you think we are missing a technology, feel free to create an issue or submit a Pull Request with the updated data.
 
-## License 📝
+## 📝 License 
 
 This project is licensed under the MIT License - see the LICENSE file for details.
